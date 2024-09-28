@@ -1,0 +1,45 @@
+document.getElementById('giftButton').addEventListener('click', function() {
+  document.getElementById('giftForm').style.display = 'block';
+});
+const deliveryDate = document.getElementById('deliveryDate').value;
+document.querySelector('form').addEventListener('submit', function(event) {
+    const email = document.getElementById('recipientEmail').value;
+    if (!email.includes('@')) {
+      alert('Please enter a valid email address.');
+      event.preventDefault(); // Stops the form from submitting
+    }
+  });
+  document.querySelector('form').addEventListener('submit', function() {
+    alert('Thank you! Your gift has been sent.');
+  });
+  alert('Oops! Something went wrong. Please try again.');
+  document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Thank you for your feedback!');
+  }); 
+  function sanitizeInput(input) {
+    return input.replace(/<|>/g, "");
+  }
+  function showLoading() {
+    document.getElementById('loading').style.display = 'block';
+  }
+  function hideLoading() {
+    document.getElementById('loading').style.display = 'none';
+  }
+  function sanitizeInput(input) {
+    return input.replace(/<|>/g, "");
+  }
+  document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Thank you for your feedback!');
+  });
+  function loadLanguage(lang) {
+    fetch(`/\${lang}.json`)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('giftButton').innerText = data.giftButton;
+      });
+  }
+  const userName = "John";
+document.getElementById('welcomeMessage').innerText = `Welcome back, \${userName}!`;
+<img src="gift.jpg" alt="A wrapped gift box"></img>

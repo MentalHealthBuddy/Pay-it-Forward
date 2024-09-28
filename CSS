@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+}
+#giftForm {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 10px;
+}
+input {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  @media (max-width: 600px) {
+    input, button {
+      width: 100%;
+    }
+  }
+  <textarea id="personalMessage" placeholder="Add a personal message..."></textarea>
+  .social-share a {
+    margin: 5px;
+    padding: 10px;
+    background-color: #0077cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  @media (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  }
